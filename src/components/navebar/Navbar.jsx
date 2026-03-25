@@ -1,14 +1,26 @@
 import React from 'react';
 import { NavLink } from 'react-router';
-import image from '../../assets/logo.png'
+import image from '../../assets/logo.png';
 
 const Navbar = () => {
 
       const links = (
             <>
-                  <li><NavLink to="/">Home</NavLink></li>
-                  <li><NavLink to="/apps">Apps</NavLink></li>
-                  <li><NavLink to="/installation">Installation</NavLink></li>
+                  <li>
+                    <NavLink to="/" className={({ isActive }) => isActive ? "text-blue-600 font-bold" : ""}>
+                        Home
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/all-apps" className={({ isActive }) => isActive ? "text-blue-600 font-bold" : ""}>
+                        Apps
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/installation" className={({ isActive }) => isActive ? "text-blue-600 font-bold" : ""}>
+                        Installation
+                    </NavLink>
+                  </li>
             </>
       );
 
@@ -21,7 +33,6 @@ const Navbar = () => {
                         {/* 🔥 Mobile Menu Button */}
                         <div className="dropdown lg:hidden">
                               <div tabIndex={0} role="button" className="btn btn-ghost">
-                                    {/* Hamburger Icon */}
                                     <svg xmlns="http://www.w3.org/2000/svg"
                                           className="h-6 w-6"
                                           fill="none"
@@ -32,7 +43,6 @@ const Navbar = () => {
                                     </svg>
                               </div>
 
-                              {/* Dropdown Menu */}
                               <ul
                                     tabIndex={0}
                                     className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
