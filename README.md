@@ -1,16 +1,92 @@
-# React + Vite
+# 📱 Hero IO - App Store Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React-based web application where users can explore apps, view details, install apps, and manage installed applications.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Live Site
 
-## React Compiler
+👉 https://cute-conkies-f4502f.netlify.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📌 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🔹 App Details Page
+
+* View app information (title, company, downloads, rating)
+* Ratings chart using Recharts
+* Install button with toast notification
+* Prevent duplicate installation
+
+### 🔹 Install System
+
+* Save installed apps in **localStorage**
+* Show "Installed" state after install
+* Navigate to Installation page after install
+
+### 🔹 My Installation Page
+
+* View all installed apps
+* Uninstall apps
+* Remove from UI + localStorage
+* Toast notification on uninstall
+
+### 🔹 Sorting System
+
+* Sort apps by downloads:
+
+  * High → Low
+  * Low → High
+
+### 🔹 UI Features
+
+* Responsive design
+* Icons for downloads, reviews, ratings
+* Clean card layout
+* Loading animation
+
+---
+
+## 🛠️ Technologies Used
+
+* React.js
+* React Router
+* Tailwind CSS
+* Recharts
+* React Icons
+* React Toastify
+
+
+---
+
+## ⚙️ Installation (Local Setup)
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+## 🌐 Deployment
+
+This project is deployed using **Vercel**
+
+```bash
+vercel --prod
+```
+
+---
+
+## ⚠️ Important Config (React Router Fix)
+
+Create a `vercel.json` file:
+
+```json
+{
+  "routes": [
+    { "src": "/.*", "dest": "/" }
+  ]
+}
+```
