@@ -52,7 +52,7 @@ const AppDetails = () => {
 
       {/* Review Chart */}
       <div className="chart mb-10">
-        <h3 className="text-2xl font-bold mb-4">Review Breakdown</h3>
+        <h3 className="text-2xl font-bold mb-4">Ratings</h3>
         <ResponsiveContainer width="100%" height={300}>
           <BarChart data={app.ratings}>
             <XAxis dataKey="name" />
